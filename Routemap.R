@@ -2,8 +2,8 @@ rm(list=ls())
 
 DestinationMap = function(AirportCode) {
   library(threejs)
-  AirlineRoutes=read.csv("~/Desktop/Routes/routes.csv")
-  Airport=read.csv("~/Desktop/Routes/airports.dat.txt")
+  AirlineRoutes=read.csv("routes.csv")
+  Airport=read.csv("airports.dat.txt")
   Airport=Airport[,c(5,7,8,9)]
   AirlineRoutes2=subset(AirlineRoutes,AirlineRoutes$source.airport==AirportCode & AirlineRoutes$codeshare!="Y")
   AirlineRoutes2=AirlineRoutes2[,c(3,5)]
